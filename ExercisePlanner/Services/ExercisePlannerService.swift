@@ -14,7 +14,7 @@ enum APIError: Error {
 }
 
 protocol ExercisePlannerProvider {
-    func fetchExerciseList() -> AnyPublisher<[ExerciseInfo], Error>
+    func fetchExerciseList() -> AnyPublisher<ExerciseInfo, Error>
 }
 
 /// An entity responsible for managing a URLSession
@@ -28,9 +28,9 @@ final class ExercisePlannerService {
 }
 
 extension ExercisePlannerService: ExercisePlannerProvider {
-    func fetchExerciseList() -> AnyPublisher<[ExerciseInfo], Error> {
+    func fetchExerciseList() -> AnyPublisher<ExerciseInfo, Error> {
         let endPoint =  ExercisePlannerEndpoint.get.url(baseUrl: base, path: .list)
-        let data: AnyPublisher<[ExerciseInfo], Error> = fetchData(with: endPoint)
+        let data: AnyPublisher<ExerciseInfo, Error> = fetchData(with: endPoint)
         return data
     }
     

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F75CFB3D28363D7A00478FFE /* ExercisePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB3C28363D7A00478FFE /* ExercisePlannerApp.swift */; };
-		F75CFB3F28363D7A00478FFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB3E28363D7A00478FFE /* ContentView.swift */; };
+		F75CFB3F28363D7A00478FFE /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB3E28363D7A00478FFE /* ExerciseListView.swift */; };
 		F75CFB4128363D7D00478FFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75CFB4028363D7D00478FFE /* Assets.xcassets */; };
 		F75CFB4428363D7D00478FFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75CFB4328363D7D00478FFE /* Preview Assets.xcassets */; };
 		F75CFB4E28363D7F00478FFE /* ExercisePlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB4D28363D7F00478FFE /* ExercisePlannerTests.swift */; };
@@ -17,6 +17,14 @@
 		F75CFB6828363E0A00478FFE /* ExercisePlannerEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB6728363E0A00478FFE /* ExercisePlannerEndpoint.swift */; };
 		F75CFB6A28364E7400478FFE /* ExercisePlannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB6928364E7400478FFE /* ExercisePlannerService.swift */; };
 		F75CFB6C283650A400478FFE /* ExerciseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB6B283650A400478FFE /* ExerciseInfo.swift */; };
+		F75CFB712836771100478FFE /* piggy.png in Resources */ = {isa = PBXBuildFile; fileRef = F75CFB702836771100478FFE /* piggy.png */; };
+		F75CFB762836C26000478FFE /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB752836C26000478FFE /* ItemCard.swift */; };
+		F75CFB782836F84200478FFE /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB772836F84200478FFE /* RemoteImageView.swift */; };
+		F75CFB7A28379A8200478FFE /* ExerciseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB7928379A8200478FFE /* ExerciseListViewModel.swift */; };
+		F75CFB7C2837E1E500478FFE /* ExerciseListVCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB7B2837E1E500478FFE /* ExerciseListVCoordinator.swift */; };
+		F75CFB802837EC4D00478FFE /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB7F2837EC4D00478FFE /* ExerciseDetailView.swift */; };
+		F75CFB822837FF0000478FFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB812837FF0000478FFE /* ContentView.swift */; };
+		F75CFB84283803AE00478FFE /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB83283803AE00478FFE /* ExerciseDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,7 @@
 /* Begin PBXFileReference section */
 		F75CFB3928363D7A00478FFE /* ExercisePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExercisePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75CFB3C28363D7A00478FFE /* ExercisePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlannerApp.swift; sourceTree = "<group>"; };
-		F75CFB3E28363D7A00478FFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F75CFB3E28363D7A00478FFE /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		F75CFB4028363D7D00478FFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75CFB4328363D7D00478FFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F75CFB4928363D7E00478FFE /* ExercisePlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExercisePlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +58,14 @@
 		F75CFB6728363E0A00478FFE /* ExercisePlannerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlannerEndpoint.swift; sourceTree = "<group>"; };
 		F75CFB6928364E7400478FFE /* ExercisePlannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlannerService.swift; sourceTree = "<group>"; };
 		F75CFB6B283650A400478FFE /* ExerciseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseInfo.swift; sourceTree = "<group>"; };
+		F75CFB702836771100478FFE /* piggy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = piggy.png; sourceTree = "<group>"; };
+		F75CFB752836C26000478FFE /* ItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
+		F75CFB772836F84200478FFE /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
+		F75CFB7928379A8200478FFE /* ExerciseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewModel.swift; sourceTree = "<group>"; };
+		F75CFB7B2837E1E500478FFE /* ExerciseListVCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListVCoordinator.swift; sourceTree = "<group>"; };
+		F75CFB7F2837EC4D00478FFE /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
+		F75CFB812837FF0000478FFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F75CFB83283803AE00478FFE /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +116,14 @@
 		F75CFB3B28363D7A00478FFE /* ExercisePlanner */ = {
 			isa = PBXGroup;
 			children = (
+				F75CFB812837FF0000478FFE /* ContentView.swift */,
+				F75CFB7D2837E94A00478FFE /* ExerciseList */,
+				F75CFB7E2837EBE200478FFE /* ExerciseDetail */,
+				F75CFB6D2836637800478FFE /* Model */,
 				F75CFB6628363DAD00478FFE /* Services */,
 				F75CFB3C28363D7A00478FFE /* ExercisePlannerApp.swift */,
-				F75CFB3E28363D7A00478FFE /* ContentView.swift */,
 				F75CFB4028363D7D00478FFE /* Assets.xcassets */,
+				F75CFB702836771100478FFE /* piggy.png */,
 				F75CFB4228363D7D00478FFE /* Preview Content */,
 			);
 			path = ExercisePlanner;
@@ -139,9 +159,61 @@
 			children = (
 				F75CFB6728363E0A00478FFE /* ExercisePlannerEndpoint.swift */,
 				F75CFB6928364E7400478FFE /* ExercisePlannerService.swift */,
-				F75CFB6B283650A400478FFE /* ExerciseInfo.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F75CFB6D2836637800478FFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F75CFB6B283650A400478FFE /* ExerciseInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F75CFB6E2836638B00478FFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F75CFB7928379A8200478FFE /* ExerciseListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F75CFB6F2836639A00478FFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F75CFB722836BD7600478FFE /* Components */,
+				F75CFB3E28363D7A00478FFE /* ExerciseListView.swift */,
+				F75CFB7B2837E1E500478FFE /* ExerciseListVCoordinator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F75CFB722836BD7600478FFE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F75CFB752836C26000478FFE /* ItemCard.swift */,
+				F75CFB772836F84200478FFE /* RemoteImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F75CFB7D2837E94A00478FFE /* ExerciseList */ = {
+			isa = PBXGroup;
+			children = (
+				F75CFB6E2836638B00478FFE /* ViewModel */,
+				F75CFB6F2836639A00478FFE /* View */,
+			);
+			path = ExerciseList;
+			sourceTree = "<group>";
+		};
+		F75CFB7E2837EBE200478FFE /* ExerciseDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F75CFB7F2837EC4D00478FFE /* ExerciseDetailView.swift */,
+				F75CFB83283803AE00478FFE /* ExerciseDetailViewModel.swift */,
+			);
+			path = ExerciseDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75CFB712836771100478FFE /* piggy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +348,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75CFB6C283650A400478FFE /* ExerciseInfo.swift in Sources */,
+				F75CFB822837FF0000478FFE /* ContentView.swift in Sources */,
+				F75CFB762836C26000478FFE /* ItemCard.swift in Sources */,
+				F75CFB84283803AE00478FFE /* ExerciseDetailViewModel.swift in Sources */,
 				F75CFB6A28364E7400478FFE /* ExercisePlannerService.swift in Sources */,
-				F75CFB3F28363D7A00478FFE /* ContentView.swift in Sources */,
+				F75CFB802837EC4D00478FFE /* ExerciseDetailView.swift in Sources */,
+				F75CFB3F28363D7A00478FFE /* ExerciseListView.swift in Sources */,
+				F75CFB7C2837E1E500478FFE /* ExerciseListVCoordinator.swift in Sources */,
 				F75CFB6828363E0A00478FFE /* ExercisePlannerEndpoint.swift in Sources */,
 				F75CFB3D28363D7A00478FFE /* ExercisePlannerApp.swift in Sources */,
+				F75CFB7A28379A8200478FFE /* ExerciseListViewModel.swift in Sources */,
+				F75CFB782836F84200478FFE /* RemoteImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +525,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +555,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
