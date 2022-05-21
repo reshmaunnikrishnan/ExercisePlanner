@@ -10,22 +10,27 @@ import SwiftUI
 struct ItemCard: View {
     var exercise: Exercise
     var body: some View {
-        
         ZStack(alignment: .topTrailing) {
+            
             ZStack(alignment: .bottom) {
-                let url = exercise.images.first?.image ?? "https://unsplash.com/photos/J154nEkpzlQ"
-                if #available(iOS 15.0, *) {
-                    AsyncImage(url: URL(string: url)) { image in
-                        image.resizable()
-                    } placeholder: {
-                        Color.red
+                let url = exercise.images.first?.image
+                if let imageURL = URL(string: url ?? "") {
+                    if #available(iOS 15.0, *) {
+                        
+                        AsyncImage( url: imageURL,
+                                  placeholder: { Text("Loading ...") },
+                                image: { Image(uiImage: $0).resizable() }
+                                     )
+                                .frame(width: 180)
+                                .clipShape(RoundedRectangle(cornerRadius: 25))
+                        
+                    } else {
+                        // Fallback on earlier versions
+                        RemoteImageView(imageUrl: url ?? "").scaledToFit()
+                            .frame(width: 180)
+                            .clipShape(RoundedRectangle(cornerRadius: 25))
+
                     }
-                    .frame(width: 180)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
-                } else {
-                    // Fallback on earlier versions
-                    let url = exercise.images.first?.image ?? "https://unsplash.com/photos/J154nEkpzlQ"
-                    RemoteImageView(imageUrl: url)
                 }
                 
                 VStack(alignment: .trailing) {
@@ -38,10 +43,7 @@ struct ItemCard: View {
             }
             .frame(width: 180, height: 250)
             .shadow(radius: 3)
-            
-           
         }
-        
     }
 }
 
