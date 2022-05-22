@@ -1,5 +1,5 @@
 //
-//  VariationsCard.swift
+//  VariationsDetailView.swift
 //  ExercisePlanner
 //
 //  Created by Reshma Unnikrishnan on 21.05.22.
@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-struct VariationsCard: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct VariationsDetailView: View {
+    let inputExercise: Exercise
 
-struct VariationsCard_Previews: PreviewProvider {
-    static var previews: some View {
-        VariationsCard()
+    var body: some View {
+            VStack(spacing: 10) {
+                Text(inputExercise.name )
+                    .font(.title)
+    
+                Text(inputExercise.description)
+                    .font(.title2)
+            }
+            .navigationBarTitle("\(inputExercise.name)", displayMode: .inline)
     }
+   
 }
