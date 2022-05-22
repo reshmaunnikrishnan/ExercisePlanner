@@ -19,7 +19,7 @@ struct ExerciseListVCoordinator: View {
             .listStyle(.plain)
             .navigationBarTitle("", displayMode: .inline)            
         }
-        }
+    }
 }
 
 

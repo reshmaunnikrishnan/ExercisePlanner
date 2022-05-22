@@ -22,10 +22,11 @@ struct ExerciseListView: View {
                     }.navigationBarTitleDisplayMode(.inline)
                     
                 }
-                
             }
             .padding()
-        }.navigationTitle("Exercise Planner")
+        }
+        .background(Color("PowderedBlue"))
+        .navigationTitle("Exercise Planner")
             .onAppear {
                 viewModel.fetchExerciseList()
             }

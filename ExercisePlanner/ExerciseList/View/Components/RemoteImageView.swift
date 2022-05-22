@@ -29,13 +29,11 @@ class RemoteImageURL {
     
     init(imageURL: String) {
         guard let url = URL(string: imageURL) else { return }
-
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }
 
             DispatchQueue.main.async { self.data = data }
-
-            }.resume()
+        }.resume()
     }
 }
 
