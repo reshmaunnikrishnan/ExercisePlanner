@@ -9,7 +9,9 @@ import Foundation
 
 
 public enum ExercisePlannerUrlPath: String {
-    case list = "/api/v2/exerciseinfo/"
+    static let urlPath = "/api/v2/exerciseinfo/"
+    case list
+    case exercise
 }
 
 let base = URL(string: "https://wger.de")!
@@ -17,14 +19,18 @@ public enum ExercisePlannerEndpoint {
     case get
     
     public func url(baseUrl: URL,
-                    path: ExercisePlannerUrlPath = .list) -> URLComponents {
+                    path: ExercisePlannerUrlPath = .list, id: String = "nil") -> URLComponents {
         switch self {
         case .get:
             var components = URLComponents()
             components.scheme = baseUrl.scheme
             components.host = baseUrl.host
             components.path = baseUrl.path
-            components.path = baseUrl.path + path.rawValue
+            components.path = baseUrl.path + ExercisePlannerUrlPath.urlPath
+
+            if path == .exercise {
+                components.path = baseUrl.path + ExercisePlannerUrlPath.urlPath + id
+            }
             return components
         }
     }

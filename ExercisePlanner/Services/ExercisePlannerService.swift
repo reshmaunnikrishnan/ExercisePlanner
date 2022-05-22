@@ -15,6 +15,8 @@ enum APIError: Error {
 
 protocol ExercisePlannerProvider {
     func fetchExerciseList() -> AnyPublisher<ExerciseInfo, Error>
+    func fetchExercise(id: String) -> AnyPublisher<Exercise, Error>
+
 }
 
 /// An entity responsible for managing a URLSession
@@ -34,6 +36,12 @@ extension ExercisePlannerService: ExercisePlannerProvider {
         return data
     }
     
+    func fetchExercise(id: String) -> AnyPublisher<Exercise, Error>   {
+        let endPoint =  ExercisePlannerEndpoint.get.url(baseUrl: base, path: .exercise, id: id)
+        let data: AnyPublisher<Exercise, Error> = fetchData(with: endPoint)
+        return data
+    }
+
     private func fetchData<T>(with components: URLComponents) -> AnyPublisher<T, Error> where T: Decodable {
         
         guard  let url = components.url else {
