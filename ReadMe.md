@@ -16,5 +16,5 @@ Created a simple exercise app which  shows list of exercise and its details.
 
 Missing:
 A detailed testing,
-more comments
+more comments or explanations
 Add network connectivity 

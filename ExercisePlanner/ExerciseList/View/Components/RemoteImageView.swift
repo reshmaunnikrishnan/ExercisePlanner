@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 
+// Creates remote image view for devices with ios 14 or lower 
 struct RemoteImageView: View {
     var remoteImageURL: RemoteImageURL
 
