@@ -6,31 +6,72 @@
 //
 
 import XCTest
+import Combine
 @testable import ExercisePlanner
 
 class ExercisePlannerTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    private var subject: ExerciseListViewModel!
+    private var mockService: MockService!
+    private var cancellables: Set<AnyCancellable> = []
+    
+    override func setUp() {
+        super.setUp()
+        mockService = MockService()
+        subject = ExerciseListViewModel(service: mockService)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        mockService = nil
+        subject = nil
+        cancellables.forEach { $0.cancel() }
+        cancellables.removeAll()
+        super.tearDown()
     }
+    
+    func testFetchExerciseListSuccess() throws {
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        // when
+        subject.fetchExerciseList()
+        
+        // then
+        XCTAssertEqual(mockService.getListCallsCount, 1)
+        subject.$exerciseList
+            .sink { XCTAssert($0.isEmpty) }
+            .store(in: &cancellables)
     }
+    
+    func testFetchExerciseListReturnWithError() throws {
+        // given
+        mockService.listResponse =  .failure(APIError.invalidResponse)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        // when
+        subject.fetchExerciseList()
+
+        // then
+        subject.$exerciseList
+            .sink { XCTAssert($0.isEmpty) }
+            .store(in: &cancellables)
     }
+    
+    func testGivenServiceCallSucceedsShouldUpdateExcercise() {
+        // given
+        let response = TestUtils.mockNetworkClient(file: "exerciseInfo.json")
+        mockService.listResponse = .success(response)
+ 
+        // when
+        subject.fetchExerciseList()
+        
+       
+        // then
+        XCTAssertEqual(mockService.getListCallsCount, 1)
+        XCTAssertEqual(mockService.listResponse, .success(response))
 
+    }
+    
+    
 }
+
+    
+  
+

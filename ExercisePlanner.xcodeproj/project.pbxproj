@@ -25,6 +25,9 @@
 		F75CFB802837EC4D00478FFE /* ExerciseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB7F2837EC4D00478FFE /* ExerciseDetailView.swift */; };
 		F75CFB822837FF0000478FFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB812837FF0000478FFE /* ContentView.swift */; };
 		F75CFB84283803AE00478FFE /* ExerciseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75CFB83283803AE00478FFE /* ExerciseDetailViewModel.swift */; };
+		F7941CB6283AEF5B00F84BD7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7941CB5283AEF5B00F84BD7 /* MockService.swift */; };
+		F7941CB8283AF04800F84BD7 /* exerciseInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = F7941CB7283AF04800F84BD7 /* exerciseInfo.json */; };
+		F7941CBA283AF16100F84BD7 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7941CB9283AF16100F84BD7 /* TestUtils.swift */; };
 		F7CC59A82838E59300E7DCDB /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC59A72838E59300E7DCDB /* ImageLoader.swift */; };
 		F7CC59AA2838E5D000E7DCDB /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC59A92838E5D000E7DCDB /* AsyncImage.swift */; };
 		F7CC59AC2838E63900E7DCDB /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC59AB2838E63900E7DCDB /* ImageCache.swift */; };
@@ -71,6 +74,9 @@
 		F75CFB7F2837EC4D00478FFE /* ExerciseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailView.swift; sourceTree = "<group>"; };
 		F75CFB812837FF0000478FFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F75CFB83283803AE00478FFE /* ExerciseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewModel.swift; sourceTree = "<group>"; };
+		F7941CB5283AEF5B00F84BD7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		F7941CB7283AF04800F84BD7 /* exerciseInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = exerciseInfo.json; sourceTree = "<group>"; };
+		F7941CB9283AF16100F84BD7 /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		F7CC59A72838E59300E7DCDB /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		F7CC59A92838E5D000E7DCDB /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		F7CC59AB2838E63900E7DCDB /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 		F75CFB4C28363D7F00478FFE /* ExercisePlannerTests */ = {
 			isa = PBXGroup;
 			children = (
+				F7941CB4283AEF1200F84BD7 /* Mocks */,
 				F75CFB4D28363D7F00478FFE /* ExercisePlannerTests.swift */,
 			);
 			path = ExercisePlannerTests;
@@ -226,6 +233,16 @@
 				F7CC59AF2839081800E7DCDB /* VariationsDetailView.swift */,
 			);
 			path = VariationDetail;
+			sourceTree = "<group>";
+		};
+		F7941CB4283AEF1200F84BD7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F7941CB7283AF04800F84BD7 /* exerciseInfo.json */,
+				F7941CB9283AF16100F84BD7 /* TestUtils.swift */,
+				F7941CB5283AEF5B00F84BD7 /* MockService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		F7CC59B12839084100E7DCDB /* AsyncImageLoad */ = {
@@ -360,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7941CB8283AF04800F84BD7 /* exerciseInfo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +421,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F75CFB4E28363D7F00478FFE /* ExercisePlannerTests.swift in Sources */,
+				F7941CBA283AF16100F84BD7 /* TestUtils.swift in Sources */,
+				F7941CB6283AEF5B00F84BD7 /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

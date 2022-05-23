@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 
 struct ExerciseListView: View {
-    @StateObject private var viewModel = ExerciseListViewModel()
+    @StateObject private var viewModel = ExerciseListViewModel(service: ExercisePlannerService())
     let tapOnExerciseAction: (Exercise) -> Void
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     

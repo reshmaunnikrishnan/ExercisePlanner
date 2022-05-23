@@ -10,6 +10,7 @@ import Combine
 
 enum APIError: Error {
     case invalidURL
+    case invalidResponse
     case network(description: String)
 }
 
