@@ -15,17 +15,17 @@ class TestUtils {
     }
 
     
-    static func mockNetworkClient(file: String) -> ExerciseInfo {
-        guard let data =  loadData(file: file) else {               return ExerciseInfo(results: [])
- }
+    static func mockNetworkClient(file: String) -> Result<ExerciseInfo, Error> {
+        guard let mockData =  loadData(file: file) else { return .failure(APIError.invalidResponse) }
+ 
         do {
-            let exerciseList: ExerciseInfo  = try JSONDecoder().decode(ExerciseInfo.self, from: data)
-            return (exerciseList)
+            let exerciseList: ExerciseInfo  = try JSONDecoder().decode(ExerciseInfo.self, from: mockData)
+            return  .success(exerciseList)
             //all fine with jsonData here
         } catch {
             //handle error
             print(error)
         }
-        return ExerciseInfo(results: [])
+        return .failure(APIError.invalidResponse)
     }
 }

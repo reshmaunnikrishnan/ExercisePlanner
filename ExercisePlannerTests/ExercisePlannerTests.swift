@@ -55,23 +55,23 @@ class ExercisePlannerTests: XCTestCase {
     }
     
     func testGivenServiceCallSucceedsShouldUpdateExcercise() {
+        
         // given
         let response = TestUtils.mockNetworkClient(file: "exerciseInfo.json")
-        mockService.listResponse = .success(response)
+        mockService.listResponse = response
  
         // when
         subject.fetchExerciseList()
         
-       
+        mockService.listResponse.map ({ data in
+            XCTAssertEqual(data.results.count, 20)
+        })
+        
         // then
         XCTAssertEqual(mockService.getListCallsCount, 1)
-        XCTAssertEqual(mockService.listResponse, .success(response))
-
+       
     }
     
-    
 }
-
-    
   
 
